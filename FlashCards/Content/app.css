@@ -1,0 +1,121 @@
+﻿.splash {
+    text-align: center;
+    margin: 10% 0 0 0;
+}
+
+.splash .message {
+    font-size: 5em;
+    line-height: 1.5em;
+    -webkit-text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+    text-transform: uppercase;
+}
+
+.splash .icon-spinner {
+    text-align: center;
+    display: inline-block;
+    font-size: 5em;
+    margin-top: 50px;
+}
+
+.page-host {
+    position: relative;
+    top: 40px;
+}
+
+.navbar-fixed-top .navbar-inner {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.navbar-fixed-top .icon-home {
+    font-size: 18px
+}
+
+.loader {
+    margin: 6px 8px 4px 8px;
+    visibility: hidden;
+}
+
+.loader.active {
+    visibility: visible;
+}
+
+.library{
+    padding: 12px 0 0 0;
+}
+
+.library ul {
+    margin-left: 0px;
+}
+
+.deck {
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin-left: 12px;
+    margin-bottom: 18px;
+    min-width: 229px;
+    padding: 30px;
+}
+
+.previousAside {
+    float: left;
+    width: 50px;
+    margin-top: 12px;
+}
+
+.nextAside {
+     float: right;
+    width: 50px;
+    margin-top: 12px;
+}
+
+.cardcontainer {
+    max-width: 960px;
+}
+
+.deckName {
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+.card {
+    position: absolute;
+    width: 92%;
+    margin: 50px 0 10px 12px;
+    min-height: 320px;
+    max-width: 940px;
+}
+.cardbody {
+    min-height: 230px;
+    margin-bottom: 7px;
+    padding: 10px 16px;
+}
+
+@media (min-width: 1000px) {
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 979px) {
+    .page-host {
+        top: 0;
+    }
+
+    .navbar-fixed-top {
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .deck {
+        width: 80%;
+        margin-left: 0;
+    }
+}

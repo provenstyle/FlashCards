@@ -1,0 +1,24 @@
+obj
+bin
+_ReSharper.*
+*.csproj.user
+*.resharper.user
+*.suo
+*.cache
+*.swp
+*.dotCover
+*.vcxproj.user
+*.sdf
+*.opensdf
+*.DotSettings.user
+Install/Publish/
+Evidence Library/build
+Hosted Services/build
+OADSI.exe.config
+WatchGuard.Evidence.Thumbnail.exe.config
+WatchGuard.client.config
+STS/build
+*.ncrunchsolution
+*.ncrunchproject
+*.ncrunchsolution.user
+*.orig
