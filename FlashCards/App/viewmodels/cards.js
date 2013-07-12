@@ -7,6 +7,9 @@
         activate = function() {
             updateCard();
         },
+        viewAttached = function() {
+            window.scrollTo(0, 1);
+        },
         flip = function() {
             if (front === true) {
                 cardText(deck.currentCard().back());
@@ -38,16 +41,17 @@
         }, this);
         
     return {
-      activate: activate,
-      deckName: deckName,  
-      cardText: cardText,
-      cardHeading: cardHeading,
-      flip: flip,
-      previous: previous,
-      next: next,
-      hasPrevious: deck.hasPrevious,
-      hasNext: deck.hasNext,
-      cardCount: cardCount
+        activate: activate,
+        viewAttached: viewAttached,
+        deckName: deckName,  
+        cardText: cardText,
+        cardHeading: cardHeading,
+        flip: flip,
+        previous: previous,
+        next: next,
+        hasPrevious: deck.hasPrevious,
+        hasNext: deck.hasNext,
+        cardCount: cardCount
       
     };
 });
