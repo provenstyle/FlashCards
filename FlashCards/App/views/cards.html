@@ -1,16 +1,14 @@
 ﻿<section class="cardcontainer">
-    <aside class="previousAside">
-    <button class="btn" data-bind="enable: hasPrevious, click: previous">Previous</button>
-    </aside>   
-    <aside class="nextAside" >
-        <button class="btn" data-bind="enable: hasNext, click: next">Next</button>
-    </aside>   
-    <article class="card clearfix clear-fix">
+    <div>
+        <button class="btn previous" data-bind="enable: hasPrevious, click: previous">Previous</button>
+        <button class="btn next" data-bind="enable: hasNext, click: next">Next</button>
+    </div>
+    <div class="card clearfix clear-fix">
         <header><span data-bind ="text: cardCount"/> <span class="deckName" data-bind="text: deckName"/></header>
         <section class="hero-unit cardbody" data-bind="click: flip">
             <h4 data-bind="text: cardHeading"/>
             <p data-bind="text: cardText"/>
         </section>
         <footer>* click to flip card</footer>
-    </article>    
+    </div>    
 </section>

@@ -1,4 +1,7 @@
-﻿.wrapper {
+﻿.navbar {
+    margin-bottom: 12px;
+}
+.wrapper {
         max-width: 720px;
         margin: 0 auto;
     }
@@ -17,19 +20,19 @@
     list-style-type: none;
     margin-left: 12px;
     margin-bottom: 18px;
-    min-width: 229px;
+    min-width: 150px;
     padding: 30px;
 }
 
-.previousAside {
+.previous {
     float: left;
-    width: 50px;
+    width: 80px;
     margin-top: 12px;
 }
 
-.nextAside {
-     float: right;
-    width: 50px;
+.next {
+    float: right;
+    width: 80px;
     margin-top: 12px;
 }
 
@@ -47,7 +50,7 @@
 .card {
     position: absolute;
     width: 92%;
-    margin: 50px 0 10px 12px;
+    margin: 64px 0 10px 12px;
     min-height: 320px;
     max-width: 940px;
 }
