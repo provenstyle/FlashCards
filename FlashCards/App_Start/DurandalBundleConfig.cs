@@ -23,6 +23,7 @@ namespace ProvenStyle.FlashCards {
           .Include("~/Content/font-awesome.min.css")
 		  .Include("~/Content/durandal.css")
           .Include("~/Content/app.css")
+          .Include("~/Content/flashCards.css")
         );
     }
 

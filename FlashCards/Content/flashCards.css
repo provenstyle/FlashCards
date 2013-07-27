@@ -1,0 +1,65 @@
+﻿.wrapper {
+        width: 720px;
+        margin: 0 auto;
+    }
+
+.library{
+    padding: 12px 0 0 0;
+}
+
+.library ul {
+    margin-left: 0px;
+}
+
+.deck {
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin-left: 12px;
+    margin-bottom: 18px;
+    min-width: 229px;
+    padding: 30px;
+}
+
+.previousAside {
+    float: left;
+    width: 50px;
+    margin-top: 12px;
+}
+
+.nextAside {
+     float: right;
+    width: 50px;
+    margin-top: 12px;
+}
+
+.cardcontainer {
+    max-width: 840px;
+}
+
+.deckName {
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+}
+
+.card {
+    position: absolute;
+    width: 92%;
+    margin: 50px 0 10px 12px;
+    min-height: 320px;
+    max-width: 940px;
+}
+.cardbody {
+    min-height: 230px;
+    margin-bottom: 7px;
+    padding: 10px 16px;
+}
+
+@media (max-width: 480px) {
+    .deck {
+        width: 80%;
+        margin-left: 0;
+    }
+}
