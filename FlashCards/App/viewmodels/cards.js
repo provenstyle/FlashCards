@@ -10,16 +10,17 @@
         viewAttached = function() {
             window.scrollTo(0, 1);
         },
-        flip = function() {
-            if (front === true) {
-                cardText(deck.currentCard().back());
-                cardHeading(deck.backHeading());
-                front = false;
-            } else {
-                cardText(deck.currentCard().front());
-                cardHeading(deck.frontHeading());
-                front = true;
-            }
+        flip = function () {
+            $('.card').toggleClass('flip');
+            //if (front === true) {
+            //    cardText(deck.currentCard().back());
+            //    cardHeading(deck.backHeading());
+            //    front = false;
+            //} else {
+            //    cardText(deck.currentCard().front());
+            //    cardHeading(deck.frontHeading());
+            //    front = true;
+            //}
         },
         next = function() {
             deck.next();

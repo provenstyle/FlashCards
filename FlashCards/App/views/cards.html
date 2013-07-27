@@ -1,14 +1,23 @@
-﻿<section class="cardcontainer">
+﻿<section>
     <div>
         <button class="btn previous" data-bind="enable: hasPrevious, click: previous">Previous</button>
         <button class="btn next" data-bind="enable: hasNext, click: next">Next</button>
     </div>
-    <div class="card clearfix clear-fix">
-        <header><span data-bind ="text: cardCount"/> <span class="deckName" data-bind="text: deckName"/></header>
-        <section class="hero-unit cardbody" data-bind="click: flip">
-            <h4 data-bind="text: cardHeading"/>
-            <p data-bind="text: cardText"/>
-        </section>
-        <footer>* click to flip card</footer>
-    </div>    
+     
+    <div class="card_content" >        
+        <span> 144 of 144</span>
+        <span class="deckName">Multiplication and something really long</span>
+        <div class="card" data-bind="click: flip">
+            <div class="front face">
+                <p>Question: What is the capital of Australia?</p>
+            </div>
+            <div class="back face">
+                <p>Answer: Canberra is the capital city of Australia.</p> 
+            </div>
+        </div>
+        <div class="footer" >
+            <span>* click to flip</span>
+        </div>
+    </div>
+    
 </section>
