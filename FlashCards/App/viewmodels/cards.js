@@ -1,8 +1,7 @@
-﻿define(['durandal/app', 'services/selectedDeck', 'services/logger'], function (app, deck, logger) {
+﻿define(['services/selectedDeck'], function (deck) {
 
     var deckName = ko.observable(deck.deckName()),
-        card = ko.observable(deck.currentCard()),
-        random = ko.observable(false),
+        card = ko.observable(deck.currentCard()),        
         activate = function() {
             updateCard();
         },
@@ -34,25 +33,19 @@
         cardCount = ko.computed(function() {
             var current = deck.currentCardId() + 1;
             return current + " of " + deck.cardCount();
-        }, this),
-        randomChanged = function() {
-            logger.log("Random checkbox value: " + random());
-            app.trigger("random", random());
-            return true;
-        };
+        }, this);
+        
         
     return {
         activate: activate,
         viewAttached: viewAttached,        
         deckName: deckName,
-        card: card,
-        random: random,
+        card: card,        
         flip: flip,
         previous: previous,
         next: next,
         hasPrevious: deck.hasPrevious,
         hasNext: deck.hasNext,
-        cardCount: cardCount,
-        randomChanged: randomChanged
+        cardCount: cardCount        
     };
 });

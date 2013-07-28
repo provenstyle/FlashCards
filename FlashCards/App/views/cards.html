@@ -16,16 +16,10 @@
                 <h1 data-bind="text: card().backHeading">Capital</h1>
                 <p data-bind="text: card().back"></p>
             </div>
-        </div>
-        <div class="footer" >
-            <span>* click to flip</span>
-            <span class="random">
-                <label>
-                    <input type="checkbox" data-bind="checked: random, click: randomChanged" />
-                    Random
-                </label>                
-            </span>
-        </div>
+        </div>        
+        
+        <!--ko compose: "viewmodels/_cardsFooter"--><!--/ko-->
+        
     </div>
     
 </section>
