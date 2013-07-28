@@ -9,11 +9,11 @@
         <span class="deckName" data-bind="text: deckName"></span>
         <div class="card" data-bind="click: flip">
             <div class="front face">
-                <h1 data-bind="text: frontHeading"></h1>
+                <h1 data-bind="text: card().frontHeading"></h1>
                 <p data-bind="text: card().front"></p>
             </div>
             <div class="back face">
-                <h1 data-bind="text: backHeading">Capital</h1>
+                <h1 data-bind="text: card().backHeading">Capital</h1>
                 <p data-bind="text: card().back"></p>
             </div>
         </div>

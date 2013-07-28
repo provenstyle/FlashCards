@@ -1,9 +1,7 @@
 ﻿define(['services/selectedDeck'], function (deck) {
 
     var deckName = ko.observable(deck.deckName()),
-        card = ko.observable(deck.currentCard()),
-        frontHeading = ko.observable(deck.frontHeading()),
-        backHeading = ko.observable(deck.backHeading()),
+        card = ko.observable(deck.currentCard()),        
         activate = function() {
             updateCard();
         },
@@ -22,9 +20,7 @@
             updateCard();
         },
         updateCard = function () {            
-            deckName(deck.deckName());
-            frontHeading(deck.frontHeading());
-            backHeading(deck.backHeading());
+            deckName(deck.deckName());            
             if ($('.card').hasClass('flip')) {
                 setTimeout(function () {
                     card(deck.currentCard());
@@ -44,8 +40,6 @@
         viewAttached: viewAttached,        
         deckName: deckName,
         card: card,
-        frontHeading: frontHeading,
-        backHeading: backHeading,
         flip: flip,
         previous: previous,
         next: next,

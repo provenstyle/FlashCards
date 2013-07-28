@@ -2,8 +2,8 @@
 
     var selectedDeckName = ko.observable("Multiplication"),
         currentCardId = ko.observable(0),
-        setSelectedDeck = function(deckName) {
-            selectedDeckName(deckName);
+        setSelectedDeck = function(name) {
+            selectedDeckName(name);
             currentCardId(0);
         },
         selectedDeck = ko.computed(function() {
@@ -35,25 +35,16 @@
         deckName = ko.computed(function () {
             return selectedDeck().name;
         }, this);
-        frontHeading = ko.computed(function() {
-            return selectedDeck().frontHeading;
-        }, this),
-        backHeading = ko.computed(function() {
-            return selectedDeck().backHeading;
-        }, this);
-    
         
     return {
         setSelectedDeck: setSelectedDeck,        
+        deckName: deckName,
         currentCard: currentCard,
         currentCardId: currentCardId,
         next: next,
         previous: previous,
         hasNext: hasNext,
         hasPrevious: hasPrevious,
-        cardCount: cardCount,
-        deckName: deckName,
-        frontHeading: frontHeading,
-        backHeading: backHeading
+        cardCount: cardCount
     };
 });
