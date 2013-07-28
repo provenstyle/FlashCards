@@ -5,13 +5,15 @@
     </div>
      
     <div class="card_content" >        
-        <span> 144 of 144</span>
-        <span class="deckName">Multiplication and something really long</span>
+        <span data-bind="text: cardCount"/>
+        <span class="deckName" data-bind="text: deckName"></span>
         <div class="card" data-bind="click: flip">
             <div class="front face">
+                <h1 data-bind="text: frontHeading"></h1>
                 <p data-bind="text: card().front"></p>
             </div>
             <div class="back face">
+                <h1 data-bind="text: backHeading">Capital</h1>
                 <p data-bind="text: card().back"></p>
             </div>
         </div>

@@ -1,8 +1,9 @@
 ﻿define(['services/selectedDeck'], function (deck) {
 
-    var deckName = ko.observable(),
-        card = ko.observable(),
-        cardHeading = ko.observable(),
+    var deckName = ko.observable(deck.deckName()),
+        card = ko.observable(deck.currentCard()),
+        frontHeading = ko.observable(deck.frontHeading()),
+        backHeading = ko.observable(deck.backHeading()),
         activate = function() {
             updateCard();
         },
@@ -20,10 +21,18 @@
             deck.previous();
             updateCard();
         },
-        updateCard = function () {
-            $('.card').removeClass('flip');
+        updateCard = function () {            
             deckName(deck.deckName());
-            card(deck.currentCard());
+            frontHeading(deck.frontHeading());
+            backHeading(deck.backHeading());
+            if ($('.card').hasClass('flip')) {
+                setTimeout(function () {
+                    card(deck.currentCard());
+                }, 400);
+            } else {
+                card(deck.currentCard());
+            }
+            $('.card').removeClass('flip');
         },
         cardCount = ko.computed(function() {
             var current = deck.currentCardId() + 1;
@@ -34,13 +43,14 @@
         activate: activate,
         viewAttached: viewAttached,        
         deckName: deckName,
-        card:card,                
+        card: card,
+        frontHeading: frontHeading,
+        backHeading: backHeading,
         flip: flip,
         previous: previous,
         next: next,
         hasPrevious: deck.hasPrevious,
         hasNext: deck.hasNext,
         cardCount: cardCount
-      
     };
 });
