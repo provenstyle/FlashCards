@@ -2,7 +2,7 @@
     
     var selectedDeckName = ko.observable("Multiplication"),
         currentCardId = ko.observable(0),
-        pickRandom= ko.observable(true),
+        pickRandom= ko.observable(false),
         setSelectedDeck = function(name) {
             selectedDeckName(name);
             currentCardId(0);

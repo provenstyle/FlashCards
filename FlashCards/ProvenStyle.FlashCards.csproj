@@ -199,7 +199,6 @@
     <Content Include="App\data\durandal.js" />
     <Content Include="App\data\statesAndCapitals.js" />
     <Content Include="App\data\multiplication.js" />
-    <Content Include="App\data\_template.js" />
     <Content Include="App\durandal\amd\almond-custom.js" />
     <Content Include="App\durandal\amd\optimizer.exe" />
     <Content Include="App\durandal\amd\r.js" />
@@ -222,7 +221,6 @@
     <Content Include="App\durandal\widget.js" />
     <Content Include="App\main.js" />
     <Content Include="App\models\card.js" />
-    <Content Include="App\models\_template.js" />
     <Content Include="App\services\cardData.js" />
     <Content Include="App\services\logger.js" />
     <Content Include="App\services\random.js" />
