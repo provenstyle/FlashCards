@@ -9,10 +9,10 @@
         <span class="deckName">Multiplication and something really long</span>
         <div class="card" data-bind="click: flip">
             <div class="front face">
-                <p>Question: What is the capital of Australia?</p>
+                <p data-bind="text: card().front"></p>
             </div>
             <div class="back face">
-                <p>Answer: Canberra is the capital city of Australia.</p> 
+                <p data-bind="text: card().back"></p>
             </div>
         </div>
         <div class="footer" >

@@ -1,8 +1,7 @@
 ﻿define(['services/selectedDeck'], function (deck) {
 
-    var front = true,
-        deckName = ko.observable(),
-        cardText = ko.observable(),
+    var deckName = ko.observable(),
+        card = ko.observable(),
         cardHeading = ko.observable(),
         activate = function() {
             updateCard();
@@ -11,16 +10,7 @@
             window.scrollTo(0, 1);
         },
         flip = function () {
-            $('.card').toggleClass('flip');
-            //if (front === true) {
-            //    cardText(deck.currentCard().back());
-            //    cardHeading(deck.backHeading());
-            //    front = false;
-            //} else {
-            //    cardText(deck.currentCard().front());
-            //    cardHeading(deck.frontHeading());
-            //    front = true;
-            //}
+            $('.card').toggleClass('flip');            
         },
         next = function() {
             deck.next();
@@ -31,10 +21,9 @@
             updateCard();
         },
         updateCard = function () {
+            $('.card').removeClass('flip');
             deckName(deck.deckName());
-            cardText(deck.currentCard().front());
-            cardHeading(deck.frontHeading());
-            front = true;
+            card(deck.currentCard());
         },
         cardCount = ko.computed(function() {
             var current = deck.currentCardId() + 1;
@@ -43,10 +32,9 @@
         
     return {
         activate: activate,
-        viewAttached: viewAttached,
-        deckName: deckName,  
-        cardText: cardText,
-        cardHeading: cardHeading,
+        viewAttached: viewAttached,        
+        deckName: deckName,
+        card:card,                
         flip: flip,
         previous: previous,
         next: next,
