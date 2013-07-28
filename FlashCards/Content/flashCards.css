@@ -148,11 +148,26 @@
     margin-top: 245px;
 }
 
+.random {
+    float: right;
+}
+.random Label{
+    display: block;
+}
+
+.random input {
+    position: relative;
+    top: -3px;
+    margin-right: 8px;
+}
+
+
 
 @media (max-width: 480px) {
     .deck {
-        width: 80%;
+        width: 85%;
         margin-left: 0;
+        padding: 18px;
     }
 
     .deckName {

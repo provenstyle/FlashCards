@@ -224,6 +224,8 @@
     <Content Include="App\models\card.js" />
     <Content Include="App\models\_template.js" />
     <Content Include="App\services\cardData.js" />
+    <Content Include="App\services\logger.js" />
+    <Content Include="App\services\random.js" />
     <Content Include="App\services\selectedDeck.js" />
     <Content Include="App\viewmodels\cards.js" />
     <Content Include="App\viewmodels\shell.js" />
