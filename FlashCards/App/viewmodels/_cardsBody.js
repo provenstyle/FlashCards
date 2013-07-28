@@ -1,15 +1,13 @@
 ﻿define(['durandal/app', 'services/selectedDeck'], function (app, deck) {
 
-    var deckName = ko.observable(deck.deckName()),
-        card = ko.observable(deck.currentCard()),
+    var card = ko.observable(deck.currentCard()),
         activate = function () {
             updateCard();
         },        
         flip = function () {
             $('.card').toggleClass('flip');
         },
-        updateCard = function () {
-            deckName(deck.deckName());
+        updateCard = function () {            
             if ($('.card').hasClass('flip')) {
                 setTimeout(function () {
                     card(deck.currentCard());
@@ -30,7 +28,7 @@
 
     return {
         activate: activate,
-        deckName: deckName,
+        deckName: deck.deckName,
         card: card,
         flip: flip,
         cardCount: cardCount
