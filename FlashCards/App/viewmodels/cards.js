@@ -1,4 +1,4 @@
-﻿define(['services/selectedDeck'], function (deck) {
+﻿define(['durandal/app','services/selectedDeck'], function (app, deck) {
 
     var deckName = ko.observable(deck.deckName()),
         card = ko.observable(deck.currentCard()),        
@@ -10,15 +10,7 @@
         },
         flip = function() {
             $('.card').toggleClass('flip');
-        },
-        next = function() {
-            deck.next();
-            updateCard();
-        },
-        previous = function() {
-            deck.previous();
-            updateCard();
-        },
+        },        
         updateCard = function() {
             deckName(deck.deckName());
             if ($('.card').hasClass('flip')) {
@@ -34,18 +26,17 @@
             var current = deck.currentCardId() + 1;
             return current + " of " + deck.cardCount();
         }, this);
-        
-        
+
+        app.on('updateCard').then(function() {
+            updateCard();
+        });
+
     return {
         activate: activate,
         viewAttached: viewAttached,        
         deckName: deckName,
         card: card,        
-        flip: flip,
-        previous: previous,
-        next: next,
-        hasPrevious: deck.hasPrevious,
-        hasNext: deck.hasNext,
+        flip: flip,        
         cardCount: cardCount        
     };
 });

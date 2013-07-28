@@ -228,8 +228,10 @@
     <Content Include="App\viewmodels\cards.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\viewmodels\library.js" />
+    <Content Include="App\viewmodels\_cardsControls.js" />
     <Content Include="App\viewmodels\_cardsFooter.js" />
     <Content Include="App\views\cards.html" />
+    <Content Include="App\views\_cardsContols.html" />
     <Content Include="App\views\_cardsFooter.html" />
     <Content Include="App\views\shell.html" />
     <Content Include="App\views\library.html" />

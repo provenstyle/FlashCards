@@ -1,8 +1,6 @@
 ﻿<section>
-    <div>
-        <button class="btn previous" data-bind="enable: hasPrevious, click: previous">Previous</button>
-        <button class="btn next" data-bind="enable: hasNext, click: next">Next</button>
-    </div>
+        
+    <!--ko compose: "viewmodels/_cardsControls"--><!--/ko-->
      
     <div class="card_content" >        
         <span data-bind="text: cardCount"/>
