@@ -1,11 +1,12 @@
 ﻿define(['durandal/app', 'services/cardData', 'services/random'], function (app, cardData, randomPicker) {
-    
+
     var selectedDeckName = ko.observable("Multiplication"),
         currentCardId = ko.observable(0),
-        pickRandom= ko.observable(false),
+        pickRandom = ko.observable(false),
         setSelectedDeck = function(name) {
             selectedDeckName(name);
             currentCardId(0);
+            app.trigger('updateCard');
         },
         selectedDeck = ko.computed(function() {
             var deck = cardData.getDeck(selectedDeckName());
@@ -14,13 +15,13 @@
         currentCard = ko.computed(function() {
             return selectedDeck().cards[currentCardId()];
         }, this),
-        next = function () {
+        next = function() {
             if (pickRandom()) {
                 var id = randomPicker.pickRandom(selectedDeck().cards);
                 currentCardId(id);
                 return;
             }
-                
+
             if (currentCardId() < selectedDeck().cards.length - 1) {
                 currentCardId(currentCardId() + 1);
             }
@@ -30,18 +31,18 @@
                 currentCardId(currentCardId() - 1);
             }
         },
-        hasNext = ko.computed(function () {
+        hasNext = ko.computed(function() {
             if (pickRandom()) return true;
             return currentCardId() < selectedDeck().cards.length - 1;
         }, this),
-        hasPrevious = ko.computed(function () {
+        hasPrevious = ko.computed(function() {
             if (pickRandom()) return false;
             return currentCardId() > 0;
         }, this),
         cardCount = ko.computed(function() {
             return selectedDeck().cards.length;
         }, this),
-        deckName = ko.computed(function () {
+        deckName = ko.computed(function() {
             return selectedDeck().name;
         }, this);
         
