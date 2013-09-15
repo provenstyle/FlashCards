@@ -199,26 +199,6 @@
     <Content Include="App\data\durandal.js" />
     <Content Include="App\data\statesAndCapitals.js" />
     <Content Include="App\data\multiplication.js" />
-    <Content Include="App\durandal\amd\almond-custom.js" />
-    <Content Include="App\durandal\amd\optimizer.exe" />
-    <Content Include="App\durandal\amd\r.js" />
-    <Content Include="App\durandal\amd\require.js" />
-    <Content Include="App\durandal\amd\text.js" />
-    <Content Include="App\durandal\app.js" />
-    <Content Include="App\durandal\composition.js" />
-    <Content Include="App\durandal\events.js" />
-    <Content Include="App\durandal\http.js" />
-    <Content Include="App\durandal\messageBox.html" />
-    <Content Include="App\durandal\messageBox.js" />
-    <Content Include="App\durandal\modalDialog.js" />
-    <Content Include="App\durandal\plugins\router.js" />
-    <Content Include="App\durandal\system.js" />
-    <Content Include="App\durandal\transitions\entrance.js" />
-    <Content Include="App\durandal\viewEngine.js" />
-    <Content Include="App\durandal\viewLocator.js" />
-    <Content Include="App\durandal\viewModel.js" />
-    <Content Include="App\durandal\viewModelBinder.js" />
-    <Content Include="App\durandal\widget.js" />
     <Content Include="App\main.js" />
     <Content Include="App\models\card.js" />
     <Content Include="App\services\cardData.js" />
@@ -317,6 +297,7 @@
     <Content Include="readme.md" />
     <None Include="Properties\PublishProfiles\flashcards.provenstyle.com.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\almond-custom.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -334,8 +315,10 @@
     <Content Include="Scripts\knockout-2.2.1.debug.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\require.js" />
     <Content Include="Scripts\sammy-0.7.4.js" />
     <Content Include="Scripts\sammy-0.7.4.min.js" />
+    <Content Include="Scripts\text.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -364,6 +347,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\durandal\" />
     <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
