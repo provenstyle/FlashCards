@@ -1,10 +1,10 @@
 ﻿define([], function () {
 
-    var viewAttached = function() {
+    var attached = function() {
         window.scrollTo(0, 1);
     };
 
     return {        
-        viewAttached: viewAttached,                
+        attached: attached,                
     };
 });

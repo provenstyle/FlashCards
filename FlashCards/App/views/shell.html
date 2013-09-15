@@ -1,7 +1,7 @@
 ﻿<div>
     <div class="navbar">
         <div class="navbar-inner">
-            <a class="brand" data-bind="attr: { href: router.visibleRoutes()[0].hash }">
+            <a class="brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
                 <i class="icon-book"></i>
                 <span>FlashCards</span>
             </a>
@@ -16,12 +16,7 @@
         </div>
     </div>
     
-    <div class="container-fluid page-host">
-        <!--ko compose: { 
-            model: router.activeItem, //wiring the router
-            afterCompose: router.afterCompose, //wiring the router
-            transition:'entrance', //use the 'entrance' transition when switching views
-            cacheViews:false //telling composition to keep views in the dom, and reuse them (only a good idea with singleton view models)
-        }--><!--/ko-->
+    <div class="container-fluid page-host">        
+        <!--ko router: { transition:'entrance', cacheViews:false }--><!--/ko-->        
     </div>
 </div>

@@ -1,16 +1,16 @@
-﻿define(['durandal/plugins/router', 'services/cardData', 'services/selectedDeck'], function(router, cardData, selectedDeck) {
+﻿define(['plugins/router', 'services/cardData', 'services/selectedDeck'], function(router, cardData, selectedDeck) {
 
-    var viewAttached = function() {
+    var attached = function() {
         window.scrollTo(0, 1);
     };
 
     var deckSelected = function(deckName) {
         selectedDeck.setSelectedDeck(deckName);
-        router.navigateTo('#/cards');
+        router.navigate('#/cards');
     };
 
     return {
-        viewAttached: viewAttached,
+        attached: attached,
         decks: cardData.listOfDecks,
         deckSelected: deckSelected
     };

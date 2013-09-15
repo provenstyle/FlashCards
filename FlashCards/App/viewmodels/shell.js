@@ -1,12 +1,14 @@
-﻿define(['durandal/plugins/router', 'durandal/app'], function (router, app) {
+﻿define(['plugins/router', 'durandal/app'], function (router, app) {
 
     return {
-        router: router,        
+        router: router,                            
         activate: function () {
-            //Scroll ios to the header bar
-            //setTimeout(function () { window.scrollTo(0, 1); }, 1000);
+            router.map([
+                { route: '', title:'Flash Card Library', moduleId: 'viewmodels/library', nav: true },
+                { route: 'cards', moduleId: 'viewmodels/cards', nav: true }
+            ]).buildNavigationModel();
             
-            return router.activate('library');
+            return router.activate();
         }
     };
 });

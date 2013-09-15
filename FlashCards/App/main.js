@@ -1,10 +1,16 @@
 ﻿requirejs.config({
     paths: {
-        'text': 'durandal/amd/text'
+        'text': '../scripts/text',
+        'durandal': '../scripts/durandal',
+        'plugins': '../scripts/durandal/plugins',
+        'transitions': '../scripts/durandal/transitions',        
     }
 });
 
-define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plugins/router'],
+define('jquery', function () { return jQuery; });
+define('knockout', ko);
+
+define(['durandal/app', 'durandal/viewLocator', 'durandal/system'],
     function(app, viewLocator, system, router) {
 
         //>>excludeStart("build", true);
@@ -12,20 +18,16 @@ define(['durandal/app', 'durandal/viewLocator', 'durandal/system', 'durandal/plu
         //>>excludeEnd("build");
 
         app.title = 'Flash Cards';
+        
+        app.configurePlugins({
+            router: true,
+            dialog: true,
+            widget: true
+        });
+
         app.start().then(function() {
-            //Replace 'viewmodels' in the moduleId with 'views' to locate the view.
-            //Look for partial views in a 'views' folder in the root.
             viewLocator.useConvention();
-
-            //configure routing
-            router.useConvention();
-            router.mapNav('library');
-            router.mapNav('cards');
-
-            app.adaptToDevice = function() {
-                //override this to get my scrolling back
-            };
-
+        
             //Show the app by setting the root view model for our application with a transition.
             app.setRoot('viewmodels/shell', 'entrance');
         });
