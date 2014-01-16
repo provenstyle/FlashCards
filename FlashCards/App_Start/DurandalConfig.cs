@@ -1,11 +1,10 @@
 using System;
 using System.Web.Optimization;
-using ProvenStyle.FlashCards.App_Start;
 
 [assembly: WebActivator.PostApplicationStartMethod(
-    typeof(DurandalConfig), "PreStart")]
+    typeof(FlashCards.App_Start.DurandalConfig), "PreStart")]
 
-namespace ProvenStyle.FlashCards.App_Start
+namespace FlashCards.App_Start
 {
     public static class DurandalConfig
     {
