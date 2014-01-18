@@ -4,10 +4,7 @@
    vm.card = {};
    vm.failed = false;
    
-   vm.activate = function (name, index, c) {
-
-      var args = arguments;
-
+   vm.activate = function (name, index) {
       return service.getCard(name, index)
          .done(function(data) {
             vm.card = data;

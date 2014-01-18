@@ -12,14 +12,15 @@
       "RequireJS": requirejs.cards
    };
 
-   var service = {};
-   service.names = [];
+   var names = [];
 
    for (var prop in data) {
       if (data.hasOwnProperty(prop)) {
-         service.names.push(prop);
+         names.push(prop);
       }
    }
+
+   var service = {};
 
    service.catalogNames = function () {
       return system.defer(function (dfd) {

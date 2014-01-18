@@ -1,5 +1,9 @@
 ﻿define(['services/flashCardService', 'plugins/observable', 'plugins/router'], function(service, observable, router) {
 
+
+
+
+
    var vm = {};
 
    vm.selectedName = '';
@@ -12,14 +16,20 @@
    vm.router = router.createChildRouter()
         .makeRelative({
            moduleId:'cards',
-           route:'cards'
+           route: 'cards/:param1'
         }).map([
-           { route: ['select(/:name)(/:index)',''], moduleId: 'card', title: 'Card', nav: true }
+           { route: ['id(/:param2)',''], moduleId: 'card', title: 'Card', nav: true }
         ]).buildNavigationModel();
 
-   vm.activate = function (name, index) {
+  router.on('router:route:not-found').then(function (route) {
+      console.log(route);
+   });
 
-      var asdf = name;
+   vm.router.on('router:route:not-found').then(function(route) {
+      console.log(route);
+   });
+
+   vm.activate = function (name) {
       //return service.getCards(name)
       //   .done(function(data) {
       //      vm.cards = data;
