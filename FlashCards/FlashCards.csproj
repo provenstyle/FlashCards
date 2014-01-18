@@ -148,7 +148,6 @@
     <Content Include="App\viewmodels\catalog.js" />
     <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\views\about.html" />
-    <Content Include="App\views\cardControls.html" />
     <Content Include="App\cards\index.html" />
     <Content Include="App\views\catalog.html" />
     <Content Include="App\views\shell.html" />
@@ -158,6 +157,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\durandal.css" />
+    <Content Include="Content\flashcards.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\ie10mobile.css" />

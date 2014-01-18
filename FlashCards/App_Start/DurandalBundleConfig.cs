@@ -26,6 +26,7 @@ namespace FlashCards
              .Include("~/Content/durandal.css")
              .Include("~/Content/starterkit.css")
              .Include("~/Content/app.css")
+             .Include("~/Content/flashcards.css")
            );
       }
 

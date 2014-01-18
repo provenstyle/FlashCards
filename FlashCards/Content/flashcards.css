@@ -1,0 +1,97 @@
+﻿.card_content{        
+    margin-top: 50px;
+    padding-top: 12px;
+    clear: left;
+    clear: right;
+    min-height: 320px;
+}
+
+.card {
+    color: #fff;
+    font-size: 18px;
+    text-shadow: none;
+    position: relative;        
+    margin-top: 12px;     
+}
+
+.card .face {
+    position:absolute; 
+
+    background:#999;
+
+    font-family: verdana, arial, sans-serif; 
+    border: 1px solid #c4c5c6;        
+
+    left:0; 
+    top:0;
+    width: 100%;
+    height: 220px; 
+    padding:12px;     
+
+    -ms-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    -webkit-transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -ms-transition: .8s ease-in-out;
+    -o-transition: .8s ease-in-out;
+    transition: .8s ease-in-out;
+}
+
+.card .face h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card .face p {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.card .back {
+    
+    
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;    
+    backface-visibility: hidden;
+
+    -moz-transform: perspective(1000px) rotateY(-180deg);
+    -webkit-transform: perspective(1000px) rotateY(-180deg);    
+    transform: perspective(1000px) rotateY(-180deg);
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+
+.card .front {
+
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -moz-transform: perspective(1000px) rotateY(0deg);
+    -webkit-transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1000px) rotateY(0deg);
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.card .front img {border:1px solid #fff;}
+
+.card.flip .back {
+    -moz-transform: perspective(1000px) rotateY(0);
+    -webkit-transform: perspective(1000px) rotateY(0);
+    transform: perspective(1000px) rotateY(0);
+}
+.card.flip .front {
+    -webkit-transform: perspective(1000px) rotateY(180deg);
+    -moz-transform: perspective(1000px) rotateY(180deg);
+    transform: perspective(1000px) rotateY(180deg);
+}

@@ -8,45 +8,48 @@
       random: false
    };
 
-   function setCurrentCard(index) {
-      module.card = module.cards[index];
-      module.index = index;
-   }
-
    module.select = function(name) {
       return service.getCards(name)
          .done(function (data) {
                module.found = true;
                module.cards = data;               
-               module.name = name;
-               setCurrentCard(0);               
+               module.name = name;               
+               module.index = 0;
+               module.card = module.cards[0];
          })
          .fail(function() {
             module.found = false;
          });
    };
 
-   module.next = function () {
-      if (module.random) {
-         var index = random.pickRandom(cards);
-         setCurrentCard(index);
+   module.setIndex = function (index) {
+      index = parseInt(index);
+      if (index < 0 || index > module.cards.length - 1) {
+         found = false;
          return;
       }
-
-      if (module.index < module.cards.length - 1) {
-         setCurrentCard(module.index + 1);         
-      }
+      module.index = index;
+      module.card = module.cards[index];
    };
 
-   module.previous = function() {
-      if (module.index > 0) {
-         setCurrentCard(module.index - 1);         
-      }
+   module.nextIndex = function () {
+      if (module.random)
+         return random.pickRandom(cards);
+
+      if (module.index < module.cards.length - 1)
+         return module.index + 1;
+
+      return module.cards.length - 1;
+   };
+
+   module.previousIndex = function() {
+      if (module.index < 1) return 0;
+      return module.index - 1;      
    };
 
    observable.defineProperty(module, "hasNext", function() {
       if (module.random) return true;
-      return module.index < cards.length - 1;
+      return module.index < module.cards.length - 1;
    });
    
    observable.defineProperty(module, "hasPrevious", function() {
@@ -62,4 +65,4 @@
    observable.convertObject(module);
 
    return module;
-});
+});   

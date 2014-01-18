@@ -1,21 +1,13 @@
-﻿define(['services/flashCardService'], function (service) {
+﻿define(['models/selectedCards'], function (selectedCards) {
    var vm = {};
-
-   vm.card = {};
-   vm.failed = false;
+   vm.selected = selectedCards;   
    
    vm.activate = function (name, index) {
-      return service.getCard(name, index)
-         .done(function(data) {
-            vm.card = data;
-         })
-         .fail(function() {
-            vm.failed = true;
-         });
+      selectedCards.setIndex(index);
    };
 
    vm.flip = function() {
-
+      $('.card').toggleClass('flip');
    };
 
    return vm;

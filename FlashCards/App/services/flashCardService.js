@@ -23,16 +23,17 @@
    var service = {};
 
    service.catalogNames = function () {
+      system.log("******** Getting catalog names")
       return system.defer(function (dfd) {
          dfd.resolve(names);
       });
    };
 
-   service.getCard = function (name, index) {
-      index = parseInt(index);
+   service.getCards = function (name) {
+      system.log("******** Getting cards")
       return system.defer(function (dfd) {
-         if (data[name] && data[name][index]) {
-            dfd.resolve(data[name][index]);
+         if (data[name]) {
+            dfd.resolve(data[name]);
          } else {
             dfd.reject();
          }

@@ -1,18 +1,9 @@
-﻿define(['services/flashCardService', 'plugins/observable', 'plugins/router'], function(service, observable, router) {
-
-
-
-
+﻿define(['durandal/system', 'plugins/router', 'models/selectedCards'], function (system, router, selectedCards) {
 
    var vm = {};
 
-   vm.selectedName = '';
-   vm.index = 0;
-   vm.card = {};
-   vm.cards = [];
-   vm.cardCount = 0;
-   vm.failed = false;
-   
+   vm.selected = selectedCards;
+
    vm.router = router.createChildRouter()
         .makeRelative({
            moduleId:'cards',
@@ -21,60 +12,32 @@
            { route: ['id(/:param2)',''], moduleId: 'card', title: 'Card', nav: true }
         ]).buildNavigationModel();
 
-  router.on('router:route:not-found').then(function (route) {
-      console.log(route);
-   });
-
-   vm.router.on('router:route:not-found').then(function(route) {
-      console.log(route);
-   });
-
    vm.activate = function (name) {
-      //return service.getCards(name)
-      //   .done(function(data) {
-      //      vm.cards = data;
-      //      vm.selectedName = name;
-      //      vm.cardCount = vm.cards.length;
-      //      selectCard(index);
-      //   })
-      //   .fail(function() {
-      //      vm.failed = true;
-      //   });
+      system.log("******** activate for index");
+      return selectedCards.name = name;
    };
 
-   function selectCard(index) {
-      index = parseInt(index);
-      if (index && index >= 0 && index < vm.cards.length) {
-         vm.card = vm.cards[index];
-         vm.index = index;
-      } else {
-         vm.card = vm.cards[0];
-      }
-   }
-
-   vm.flip = function() {
-
+   vm.binding = function(name, d, e) {
+      system.log("******** binding complete for index");
+      return selectedCards.select(selectedCards.name);
    };
 
-
-   observable.defineProperty(vm, 'hasPrevious', function() {
-      return true;
-   });
-   
-   observable.defineProperty(vm, 'hasNext', function () {
-      return true;
-   });
-   
    vm.previous = function () {
-      navigate(vm.index - 1);
+      if (selectedCards.hasPrevious) {
+         navigate(selectedCards.previousIndex());
+      }
    };
-   
-   vm.next = function () {
-      navigate(vm.index + 1);
+
+   vm.next = function() {
+      if (selectedCards.hasNext) {
+         navigate(selectedCards.nextIndex());
+      }
    };
 
    function navigate(index) {
-      router.navigate('#cards/' + encodeURIComponent(vm.selectedName) + '/' + index);
+      var url = '#cards/' + encodeURIComponent(selectedCards.name) + '/id/' + index;
+      system.log(url);
+      router.navigate(url);
    }
 
    return vm;
