@@ -3,46 +3,38 @@
         'mockData/statesAndCapitals',
         'mockData/durandal',
         'mockData/requirejs'
-   ], function (system, multiplication, states, durandaljs, requirejs) {
+], function (system, multiplication, states, durandaljs, requirejs) {
 
-   var names = [
-      "Multiplication",
-      "States and Capitals",
-      "Durandal",
-      "RequireJS"
-   ];
+   var data = {
+      "Multiplication": multiplication.cards,
+      "States and Capitals": states.cards,
+      "Durandal": durandaljs.cards,
+      "RequireJS": requirejs.cards
+   };
+
    var service = {};
+   service.names = [];
 
-   service.catalogNames = function() {
-      return system.defer(function(dfd) {
+   for (var prop in data) {
+      if (data.hasOwnProperty(prop)) {
+         service.names.push(prop);
+      }
+   }
+
+   service.catalogNames = function () {
+      return system.defer(function (dfd) {
          dfd.resolve(names);
       });
    };
 
-   service.getCards = function(name) {
-      return system.defer(function(dfd) {
-
-         switch (name) {
-            case names[0]:
-               dfd.resolve(multiplication.cards);
-               break;
-               
-            case names[1]:
-               dfd.resolve(states.cards);
-               break;
-               
-            case names[2]:
-               dfd.resolve(durandaljs.cards);
-               break;
-               
-            case names[3]:
-               dfd.resolve(requirejs.cards);
-               break;
-            
-            default:
-               dfd.reject();
+   service.getCard = function (name, index) {
+      index = parseInt(index);
+      return system.defer(function (dfd) {
+         if (data[name] && data[name][index]) {
+            dfd.resolve(data[name][index]);
+         } else {
+            dfd.reject();
          }
-
       });
    };
 

@@ -8,18 +8,28 @@
    vm.cards = [];
    vm.cardCount = 0;
    vm.failed = false;
+   
+   vm.router = router.createChildRouter()
+        .makeRelative({
+           moduleId:'cards',
+           route:'cards'
+        }).map([
+           { route: ['select(/:name)(/:index)',''], moduleId: 'card', title: 'Card', nav: true }
+        ]).buildNavigationModel();
 
-   vm.activate = function(name, index) {
-      return service.getCards(name)
-         .done(function(data) {
-            vm.cards = data;
-            vm.selectedName = name;
-            vm.cardCount = vm.cards.length;
-            selectCard(index);
-         })
-         .fail(function() {
-            vm.failed = true;
-         });
+   vm.activate = function (name, index) {
+
+      var asdf = name;
+      //return service.getCards(name)
+      //   .done(function(data) {
+      //      vm.cards = data;
+      //      vm.selectedName = name;
+      //      vm.cardCount = vm.cards.length;
+      //      selectCard(index);
+      //   })
+      //   .fail(function() {
+      //      vm.failed = true;
+      //   });
    };
 
    function selectCard(index) {

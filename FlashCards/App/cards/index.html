@@ -4,6 +4,10 @@
     <button class="btn next" data-bind="enable: hasNext, click: next">Next</button>
    </div>
    
-   <div data-bind="router: { cacheViews: false }"></div>
+   <div data-bind="router: { transition:'entrance', activationData: 'helloWorld' }"></div>
+   
+   <footer>
+      <h2>Footer</h2>
+   </footer>
 
 </div>

@@ -5,7 +5,7 @@
             router.map([
                 { route: ['catalog', '' ], title: 'Catalog', moduleId: 'viewmodels/catalog', nav: true },
                 { route: 'about', title: 'About', moduleId: 'viewmodels/about', nav: true },
-                { route: 'cards/:name(/:index)', title: 'Cards', moduleId: 'viewmodels/cards', nav: false }
+                { route: 'cards*details', title: 'Cards', moduleId: 'cards/index', hash:'#cards', nav: false }
                
             ]).buildNavigationModel();
 
