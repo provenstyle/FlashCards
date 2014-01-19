@@ -1,4 +1,13 @@
-﻿div.status {
+﻿div.checkbox {
+   margin-top: 15px;
+   margin-left: 15px;
+}
+
+.navbar label {
+   color: rgb(153, 153, 153);
+}
+
+div.status {
    margin-top: 8px;
    color: #666; 
 }
@@ -15,7 +24,8 @@
 }
 
 .card .face {
-    position:absolute; 
+    position:absolute;
+   min-height: 200px;
     
     -webkit-transition: .8s ease-in-out;
     -moz-transition: .8s ease-in-out;

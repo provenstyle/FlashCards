@@ -29,8 +29,8 @@
     padding-right: 1em;
 }
 
-.navbar-default .fa-home {
-    margin-right: 5px;
+.navbar i {
+    margin-right: 8px;
 }
 
 .loader {
@@ -40,6 +40,10 @@
 
 .loader.active {
     visibility: visible;
+}
+
+.app-container {
+   margin-top: 77px;
 }
 
 .flickr .list-inline>li:first-child {

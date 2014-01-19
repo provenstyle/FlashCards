@@ -1,7 +1,6 @@
 ﻿define(['durandal/system', 'plugins/router', 'models/selectedCards'], function (system, router, selectedCards) {
 
-   var vm = {},
-      nameParam = '';
+   var vm = {}, nameParam = '';
 
    vm.selected = selectedCards;
 

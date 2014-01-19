@@ -1,4 +1,4 @@
-﻿define(['plugins/observable', 'services/flashCardService', 'models/random'], function(observable, service, random) {
+﻿define(['durandal/app', 'durandal/system', 'plugins/observable', 'services/flashCardService', 'models/random'], function(app, system, observable, service, random) {
    var module = {
       name:'',
       cards:[],
@@ -7,6 +7,11 @@
       found: false,
       random: false
    };
+
+   app.on('randomChanged').then(function (data) {
+      system.log('Random changed: ' + data);
+      module.random = data;
+   });
 
    module.select = function(name) {
       return service.getCards(name)
@@ -34,7 +39,7 @@
 
    module.nextIndex = function () {
       if (module.random)
-         return random.pickRandom(cards);
+         return random.pickRandom(module.cards);
 
       if (module.index < module.cards.length - 1)
          return module.index + 1;
