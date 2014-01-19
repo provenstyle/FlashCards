@@ -1,0 +1,1 @@
+define(["models/selectedCards"],function(e){var t={},n=0;return t.selected=e,t.activate=function(e,t){n=t},t.attached=function(){e.setIndex(n)},t.flip=function(){$(".card").toggleClass("flip")},t});

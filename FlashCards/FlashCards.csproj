@@ -132,6 +132,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="AppBuilt\main.js" />
     <Content Include="App\main.js" />
     <Content Include="App\mockData\durandal.js" />
     <Content Include="App\mockData\multiplication.js" />
@@ -195,6 +196,7 @@
     <Content Include="weyland-config.js" />
     <Content Include="readme.md" />
     <None Include="Properties\PublishProfiles\FlashCards.Provenstyle.com.pubxml" />
+    <None Include="Properties\PublishProfiles\ToFileSystem.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -252,6 +254,10 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>cd $(ProjectDir)
+weyland build</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

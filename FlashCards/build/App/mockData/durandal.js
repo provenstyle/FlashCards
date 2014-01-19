@@ -1,0 +1,1 @@
+define(["models/card"],function(e){var n=[new e("True or False:","Durandal is a data access framework for JavaScript.","False:","Durandal is Single-Page Application framework."),new e("True or False:","Durandal has writen its own module loader.","False:","Durandal uses RequireJS as it module loader.")];return{cards:n}});

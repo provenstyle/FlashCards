@@ -1,0 +1,1 @@
+define(["services/flashCardService","plugins/router"],function(e,n){var t={};return t.catalogNames=[],t.activate=function(){return e.catalogNames().done(function(e){t.catalogNames=e})},t.goToCards=function(e){n.navigate("#cards/"+encodeURIComponent(e)+"/id/0")},t});
