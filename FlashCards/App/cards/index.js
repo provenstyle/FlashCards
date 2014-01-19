@@ -1,6 +1,7 @@
 ﻿define(['durandal/system', 'plugins/router', 'models/selectedCards'], function (system, router, selectedCards) {
 
-   var vm = {};
+   var vm = {},
+      nameParam = '';
 
    vm.selected = selectedCards;
 
@@ -14,12 +15,12 @@
 
    vm.activate = function (name) {
       system.log("******** activate for index");
-      return selectedCards.name = name;
+      nameParam = name;
    };
 
    vm.binding = function(name, d, e) {
       system.log("******** binding complete for index");
-      return selectedCards.select(selectedCards.name);
+      return selectedCards.select(nameParam);
    };
 
    vm.previous = function () {
