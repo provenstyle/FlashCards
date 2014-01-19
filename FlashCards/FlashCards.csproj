@@ -194,6 +194,7 @@
     <Content Include="Scripts\durandal\viewLocator.js" />
     <Content Include="weyland-config.js" />
     <Content Include="readme.md" />
+    <None Include="Properties\PublishProfiles\FlashCards.Provenstyle.com.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
