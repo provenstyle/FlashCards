@@ -9,6 +9,8 @@
                
             ]).buildNavigationModel();
 
+           router.mapUnknownRoutes('viewmodels/catalog', "#catalog");
+
             return router.activate();
         },
         randomChecked: false,

@@ -30,7 +30,7 @@
    module.setIndex = function (index) {
       index = parseInt(index);
       if (index < 0 || index > module.cards.length - 1) {
-         found = false;
+         module.found = false;
          return;
       }
       module.index = index;
