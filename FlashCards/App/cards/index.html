@@ -1,12 +1,19 @@
-﻿<div>
+﻿<div class="col-xs-offset-1 col-xs-10">
    
    <div data-bind="visible: selected.found === true">
-      <div>
-         <button class="btn previous" data-bind="enable: selected.hasPrevious, click: previous">Previous</button>
-         <button class="btn next" data-bind="enable: selected.hasNext, click: next">Next</button>
+      <div class="row">
+         <button class="col-xs-4 col-sm-2 btn col-md-1" 
+                 data-bind="enable: selected.hasPrevious, click: previous">Previous</button>
+         <button class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-8 col-md-1 col-md-offset-10 btn" 
+                 data-bind="enable: selected.hasNext, click: next">Next</button>
       </div>
-   
-      <div data-bind="router: { transition:'entrance', activationData: 'helloWorld' }"></div>
+      
+      <div class="row status">
+         <span class="cardCount" data-bind="text: selected.selectedOf"/>
+         <span class="selectedName" data-bind="text: selected.name"></span>
+      </div>
+
+      <div class="row" data-bind="router: { transition:'entrance', activationData: 'helloWorld' }"></div>
                
    </div>
 
