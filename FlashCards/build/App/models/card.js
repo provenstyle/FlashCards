@@ -1,1 +1,0 @@
-define(function(){return function(e,n,t,s){this.frontHeading=e,this.front=n,this.backHeading=t,this.back=s}});

@@ -1,1 +1,0 @@
-define(["durandal/system"],function(e){var n=function(n){var s=t(0,n.length-1);return e.log("Random Index: "+s),s},t=function(e,n){return Math.floor(Math.random()*(n-e+1))+e};return{pickRandom:n,randomBetween:t}});

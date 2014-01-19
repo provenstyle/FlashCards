@@ -1,1 +1,0 @@
-define(["models/card"],function(e){var n=[new e("True or False:","RequireJS uses r.js to bundle and minify your AMD modules.","True",""),new e("True or False:","AMD stands for Asynchronous Module Definition.","True","")];return{cards:n}});
