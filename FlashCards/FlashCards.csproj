@@ -162,9 +162,13 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\ie10mobile.css" />
-    <Content Include="Content\images\icon.png" />
-    <Content Include="Content\images\ios-startup-image-landscape.png" />
-    <Content Include="Content\images\ios-startup-image-portrait.png" />
+    <Content Include="Content\images\AppIcon120x120.png" />
+    <Content Include="Content\images\AppIcon152x152.png" />
+    <Content Include="Content\images\AppIcon60x60.png" />
+    <Content Include="Content\images\AppIcon76x76.png" />
+    <Content Include="Content\images\StartUp1024x748.png" />
+    <Content Include="Content\images\StartUp640x1026.png" />
+    <Content Include="Content\images\StartUp768X1004.png" />
     <Content Include="Content\starterkit.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
