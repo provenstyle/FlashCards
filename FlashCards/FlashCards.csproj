@@ -164,6 +164,7 @@
     <Content Include="Content\ie10mobile.css" />
     <Content Include="Content\images\AppIcon120x120.png" />
     <Content Include="Content\images\AppIcon152x152.png" />
+    <Content Include="Content\images\AppIcon32x32.png" />
     <Content Include="Content\images\AppIcon60x60.png" />
     <Content Include="Content\images\AppIcon76x76.png" />
     <Content Include="Content\images\StartUp1024x748.png" />
