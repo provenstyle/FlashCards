@@ -17,8 +17,8 @@
       return service.getCards(name)
          .done(function (data) {
                module.found = true;
-               module.cards = data;               
-               module.name = name;               
+               module.cards = data;
+               module.name = name;
                module.index = 0;
                module.card = module.cards[0];
          })

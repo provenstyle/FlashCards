@@ -2,16 +2,16 @@
    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
          <div class="navbar-header">
-         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-         </button>
-         <a class="navbar-brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
-            <i class="fa fa-book"></i><span>Flash Cards</span>
-         </a>
-      </div>   
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
+               <i class="fa fa-book"></i><span>Flash Cards</span>
+            </a>
+         </div>
          <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav" data-bind="foreach: router.navigationModel">
                <li data-bind="css: { active: isActive }">
@@ -22,8 +22,9 @@
                <li>
                   <div class="checkbox">
                      <label>
-                        <input type="checkbox" data-bind="checked: randomChecked, click: randomChanged"/> Random
-                     </label>   
+                        <input type="checkbox" data-bind="checked: randomChecked, click: randomChanged" />
+                        Random
+                     </label>
                   </div>
                </li>
                <li class="loader" data-bind="css: { active: router.isNavigating }">
@@ -34,5 +35,5 @@
       </div>
    </div>
 
-    <div class="app-container container" data-bind="router: { cacheViews: false }"></div>
+   <div class="app-container container" data-bind="router: { cacheViews: false }"></div>
 </div>

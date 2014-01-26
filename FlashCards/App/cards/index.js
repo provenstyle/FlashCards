@@ -17,7 +17,7 @@
       nameParam = name;
    };
 
-   vm.binding = function(name, d, e) {
+   vm.binding = function() {
       system.log("******** binding complete for index");
       return selectedCards.select(nameParam);
    };
