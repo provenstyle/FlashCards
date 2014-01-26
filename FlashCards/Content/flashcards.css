@@ -24,6 +24,16 @@ div.status {
     cursor: pointer
 }
 
+.previous.hidden {
+   visibility: hidden;
+   display: block!important;
+}
+
+.next.hidden {
+   visibility: hidden;
+   display: block!important;
+}
+
 .card .face {
     position:absolute;
    min-height: 200px;
