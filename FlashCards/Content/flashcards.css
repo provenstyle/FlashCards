@@ -21,6 +21,7 @@ div.status {
 .card {    
     position: relative;        
     margin-top: 8px;     
+    cursor: pointer
 }
 
 .card .face {
