@@ -6,7 +6,7 @@
 
    vm.router = router.createChildRouter()
         .makeRelative({
-           moduleId:'cards',
+           moduleId:'viewmodels',
            route: 'cards/:param1'
         }).map([
            { route: ['id(/:param2)',''], moduleId: 'card', title: 'Card', nav: true }
