@@ -1,4 +1,4 @@
-﻿define(['durandal/app', 'durandal/system', 'plugins/observable', 'services/flashCardService', 'models/random'], function(app, system, observable, service, random) {
+﻿define(['durandal/app', 'durandal/system', 'plugins/observable', 'services/flashCardService'], function(app, system, observable, service) {
    var module = {
       name:'',
       cards:[],
