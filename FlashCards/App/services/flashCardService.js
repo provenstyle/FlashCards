@@ -1,15 +1,13 @@
 ﻿define(['durandal/system',
       'mockData/multiplication',
       'mockData/statesAndCapitals',
-      'mockData/durandal',
-      'mockData/requirejs'
-   ], function(system, multiplication, states, durandaljs, requirejs) {
+      'mockData/angular'
+   ], function(system, multiplication, states, angular) {
 
       var data = {
          "Multiplication": multiplication.cards,
          "States and Capitals": states.cards,
-         "Durandal": durandaljs.cards,
-         "RequireJS": requirejs.cards
+         "Angular": angular.cards,
       };
 
       var names = [];
