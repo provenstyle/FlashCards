@@ -1,0 +1,9 @@
+﻿<section>
+   <ul class="list-inline" data-bind="foreach: catalogNames">
+      <li class="col-xs-12 col-sm-6 col-md-3" data-bind="click: $parent.goToCards">
+         <div class="well">
+            <p class="lead" data-bind="text: $data"></p>
+         </div>
+      </li>
+   </ul>
+</section>
