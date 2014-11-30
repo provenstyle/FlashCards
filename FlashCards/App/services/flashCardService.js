@@ -1,42 +1,43 @@
-﻿define(['durandal/system',
-      'mockData/multiplication',
-      'mockData/statesAndCapitals',
-      'mockData/angular'
-   ], function(system, multiplication, states, angular) {
+﻿(function () {
+    angular
+        .module('flashCards')
+        .factory('flashCardService', flashCardService);
 
-      var data = {
-         "Multiplication": multiplication.cards,
-         "States and Capitals": states.cards,
-         "Angular": angular.cards,
-      };
+    flashCardService.$inject = [$q, 'angularMockData', 'multiplicationMockData', 'statesAndCapitalsMockData'];
 
-      var names = [];
+    function flashCardService($q, angular, multiplication, statesAndCapitals) {
+        
+        var data = {
+            "Multiplication": multiplication.cards,
+            "States and Capitals": statesAndCapitals.cards,
+            "Angular": angular.cards,
+        };
 
-      for (var prop in data) {
-         if (data.hasOwnProperty(prop)) {
-            names.push(prop);
-         }
-      }
+        return {
+            catalogNames: catalogNames,
+            getCards: getCards
+        }
 
-      var service = {};
+        function catalogNames() {
+            return $q(function (resolve) {
+                var names = [];
+                for (var prop in data) {
+                    if (data.hasOwnProperty(prop)) {
+                        names.push(prop);
+                    }
+                }
+                resolve(names);
+            });
+        }
 
-      service.catalogNames = function() {
-         system.log("******** Getting catalog names");
-         return system.defer(function(dfd) {
-            dfd.resolve(names);
-         });
-      };
-
-      service.getCards = function(name) {
-         system.log("******** Getting cards");
-         return system.defer(function(dfd) {
-            if (data[name]) {
-               dfd.resolve(data[name]);
-            } else {
-               dfd.reject();
-            }
-         });
-      };
-
-      return service;
-   });
+        function getCards(name) {
+            return $q(function(resolve, reject) {
+                if (data[name]) {
+                    resolve(data[name]);
+                } else {
+                    reject();
+                }
+            });
+        }
+    }
+})();
