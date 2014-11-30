@@ -16,10 +16,17 @@ namespace FlashCards
              .Include("~/Scripts/angular.js")
              .Include("~/Scripts/angular-route.js")
 
-
              .Include("~/App/flashCardsModule.js")
 
              .Include("~/App/configs/routeConfig.js")
+             
+             .Include("~/App/configs/cardFactory.js")
+             .Include("~/App/configs/selectedCards.js")
+
+             .Include("~/App/mockData/angularMockData.js")
+             .Include("~/App/mockData/multiplicationMockData.js")
+             .Include("~/App/mockData/statesAndCapitalsMockData.js")
+             .Include("~/App/services/flashCardService.js")
 
              .Include("~/App/controllers/catalogController.js")
 
