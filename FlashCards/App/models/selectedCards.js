@@ -27,14 +27,13 @@
 
         function select(name) {
             return flashCardService.getCards(name)
-               .done(function (data) {
+               .then(function (data) {
                    module.found = true;
                    module.cards = data;
                    module.name = name;
                    module.index = 0;
                    module.card = module.cards[0];
-               })
-               .fail(function() {
+               }, function() {
                    module.found = false;
                });
         }

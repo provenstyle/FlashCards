@@ -15,6 +15,11 @@
                 controller: 'catalogController'
             })
 
+            .when('/cards/:name/ids/:id', {
+                templateUrl: 'App/views/cards.html',
+                controller: 'cardsController'
+            })
+
             .otherwise({
                 redirectTo: '/'
             });

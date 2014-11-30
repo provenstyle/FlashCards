@@ -1,35 +1,41 @@
 ﻿<div class="col-xs-offset-1 col-xs-10">
-   
-   <div data-bind="visible: selected.found === true">
-      <div class="row"> 
-         <button class="previous col-xs-4 col-sm-2 col-lg-1 btn btn-default"
-                 data-bind="css: {'hidden' : !selected.hasPrevious}, click: previous">Previous</button>
-         <button class="next col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-8 col-lg-1 col-lg-offset-10 btn btn-default"
-                 data-bind="css: { 'hidden': !selected.hasNext }, click: next">Next</button>
-      </div>
-      
-      <div class="row status">
-         <span data-bind="text: selected.selectedOf"/>
-         <span class="selectedName" data-bind="text: selected.name"></span>
-      </div>
 
-       <div class ="row">
-           <div class="card" data-bind="click: flip">
-               <div class="col-xs-12 well front face ">
-                   <h4 data-bind="text: selected.card.frontHeading"></h4>
-                   <p data-bind="text: selected.card.front"></p>
-               </div>
-               <div class="col-xs-12 well back face">
-                   <h4 data-bind="text: selected.card.backHeading"></h4>
-                   <p data-bind="text: selected.card.back"></p>
-               </div>
-           </div>
-       </div> 
-      
-   </div>
+    <div ng-if="selected.found">
+        <div class="row">
+            <button class="previous col-xs-4 col-sm-2 col-lg-1 btn btn-default"
+                    ng-class="{'hidden': !selected.hasPrevious()}"
+                    ng-click="previous()">
+                Previous
+            </button>
+            <button class="next col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-8 col-lg-1 col-lg-offset-10 btn btn-default"
+                    ng-class="{'hidden': !selected.hasNext()}"
+                    ng-click="next()">
+                Next
+            </button>
+        </div>
 
-   <div data-bind="visible: selected.found === false">
-      <h2>Card not found.</h2>
-   </div>
+        <div class="row status">
+            <span>{{ selected.selectedOf() }}</span>
+            <span class="selectedName">{{ selected.name }}</span>
+        </div>
+
+        <div class="row">
+            <div class="card" ng-click="flip()">
+                <div class="col-xs-12 well front face ">
+                    <h4>{{ selected.card.frontHeading }}</h4>
+                    <p>{{ selected.card.front }}</p>
+                </div>
+                <div class="col-xs-12 well back face">
+                    <h4>{{ selected.card.backHeading }}</h4>
+                    <p>{{ selected.card.back }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div ng-if="!selected.found">
+        <h2>Card not found.</h2>
+    </div>
 
 </div>

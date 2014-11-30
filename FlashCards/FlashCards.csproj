@@ -154,6 +154,7 @@
     <Content Include="App-Durandal\views\catalog.html" />
     <Content Include="App-Durandal\views\shell.html" />
     <Content Include="App\configs\routeConfig.js" />
+    <Content Include="App\controllers\cardsController.js" />
     <Content Include="App\controllers\catalogController.js" />
     <Content Include="App\flashCardsModule.js" />
     <Content Include="App\mockData\angularMockData.js" />
@@ -162,7 +163,6 @@
     <Content Include="App\models\cardFactory.js" />
     <Content Include="App\models\selectedCards.js" />
     <Content Include="App\services\flashCardService.js" />
-    <Content Include="App\viewmodels\cards.js" />
     <Content Include="App\views\cards.html" />
     <Content Include="App\views\catalog.html" />
     <Content Include="Content\app.css" />
