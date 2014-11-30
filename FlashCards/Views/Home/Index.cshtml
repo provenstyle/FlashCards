@@ -30,20 +30,23 @@
       }
    </script>
 </head>
-<body>
-   <div id="applicationHost">
-      @Html.Partial("_splash")
-   </div>
+    <body ng-app="flashCards">
+        
+        <div>
+            <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">
+                            <i class="fa fa-book"></i><span>Flash Cards</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-   @Scripts.Render("~/Scripts/vendor")
-   
-   @if (HttpContext.Current.IsDebuggingEnabled)
-   {
-      <script type="text/javascript" src="~/Scripts/require.js" data-main="/App/main"></script>
-   }
-   else
-   {
-      <script type="text/javascript" src="~/Scripts/require.js" data-main="/AppBuilt/main"></script>
-   }
-</body>
+        <div id="applicationHost" class="row" ng-view>
+        </div>
+
+        @Scripts.Render("~/Scripts/angular")
+    </body>
 </html>

@@ -12,6 +12,7 @@ namespace FlashCards.App_Start
         {
             // Add your start logic here
             DurandalBundleConfig.RegisterBundles(BundleTable.Bundles);
+            AngularBundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }

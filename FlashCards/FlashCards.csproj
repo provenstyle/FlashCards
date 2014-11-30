@@ -120,6 +120,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AngularBundleConfig.cs" />
     <Compile Include="App_Start\DurandalBundleConfig.cs" />
     <Compile Include="App_Start\DurandalConfig.cs" />
     <Compile Include="Controllers\DurandalController.cs" />
@@ -152,7 +153,9 @@
     <Content Include="App - Durandal\views\cards.html" />
     <Content Include="App - Durandal\views\catalog.html" />
     <Content Include="App - Durandal\views\shell.html" />
-    <Content Include="App\main.js" />
+    <Content Include="App\configs\routeConfig.js" />
+    <Content Include="App\controllers\catalogController.js" />
+    <Content Include="App\flashCardsModule.js" />
     <Content Include="App\mockData\angular.js" />
     <Content Include="App\mockData\multiplication.js" />
     <Content Include="App\mockData\statesAndCapitals.js" />
@@ -161,10 +164,8 @@
     <Content Include="App\services\flashCardService.js" />
     <Content Include="App\viewmodels\cards.js" />
     <Content Include="App\viewmodels\catalog.js" />
-    <Content Include="App\viewmodels\shell.js" />
     <Content Include="App\views\cards.html" />
     <Content Include="App\views\catalog.html" />
-    <Content Include="App\views\shell.html" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
