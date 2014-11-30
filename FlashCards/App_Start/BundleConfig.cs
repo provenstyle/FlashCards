@@ -3,7 +3,7 @@ using System.Web.Optimization;
 
 namespace FlashCards
 {
-    public class AngularBundleConfig
+    public class BundleConfig
     {
         public static void RegisterBundles(BundleCollection bundles)
         {

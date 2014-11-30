@@ -120,10 +120,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\AngularBundleConfig.cs" />
-    <Compile Include="App_Start\DurandalBundleConfig.cs" />
-    <Compile Include="App_Start\DurandalConfig.cs" />
-    <Compile Include="Controllers\DurandalController.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -134,25 +131,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Content Include="App-Durandal\main.js" />
-    <Content Include="App-Durandal\mockData\durandal.js" />
-    <Content Include="App-Durandal\mockData\multiplication.js" />
-    <Content Include="App-Durandal\mockData\requirejs.js" />
-    <Content Include="App-Durandal\mockData\statesAndCapitals.js" />
-    <Content Include="App-Durandal\models\card.js" />
-    <Content Include="App-Durandal\models\random.js" />
-    <Content Include="App-Durandal\models\selectedCards.js" />
-    <Content Include="App-Durandal\services\flashCardService.js" />
-    <Content Include="App-Durandal\viewmodels\about.js" />
-    <Content Include="App-Durandal\viewmodels\card.js" />
-    <Content Include="App-Durandal\viewmodels\cards.js" />
-    <Content Include="App-Durandal\viewmodels\catalog.js" />
-    <Content Include="App-Durandal\viewmodels\shell.js" />
-    <Content Include="App-Durandal\views\about.html" />
-    <Content Include="App-Durandal\views\card.html" />
-    <Content Include="App-Durandal\views\cards.html" />
-    <Content Include="App-Durandal\views\catalog.html" />
-    <Content Include="App-Durandal\views\shell.html" />
     <Content Include="App\configs\routeConfig.js" />
     <Content Include="App\controllers\cardsController.js" />
     <Content Include="App\controllers\catalogController.js" />
@@ -194,7 +172,6 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Scripts\almond-custom.js" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -218,22 +195,6 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\durandal\activator.js" />
-    <Content Include="Scripts\durandal\app.js" />
-    <Content Include="Scripts\durandal\binder.js" />
-    <Content Include="Scripts\durandal\composition.js" />
-    <Content Include="Scripts\durandal\events.js" />
-    <Content Include="Scripts\durandal\plugins\dialog.js" />
-    <Content Include="Scripts\durandal\plugins\history.js" />
-    <Content Include="Scripts\durandal\plugins\http.js" />
-    <Content Include="Scripts\durandal\plugins\observable.js" />
-    <Content Include="Scripts\durandal\plugins\router.js" />
-    <Content Include="Scripts\durandal\plugins\serializer.js" />
-    <Content Include="Scripts\durandal\plugins\widget.js" />
-    <Content Include="Scripts\durandal\system.js" />
-    <Content Include="Scripts\durandal\transitions\entrance.js" />
-    <Content Include="Scripts\durandal\viewEngine.js" />
-    <Content Include="Scripts\durandal\viewLocator.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -962,10 +923,8 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
-    <Content Include="readme.md" />
     <None Include="Properties\PublishProfiles\FlashCards.Provenstyle.com.pubxml" />
     <None Include="Properties\PublishProfiles\ToFileSystem.pubxml" />
-    <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
@@ -981,11 +940,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
-    <Content Include="Scripts\knockout-2.3.0.debug.js" />
-    <Content Include="Scripts\knockout-2.3.0.js" />
-    <Content Include="Scripts\r.js" />
-    <Content Include="Scripts\require.js" />
-    <Content Include="Scripts\text.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -998,11 +952,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\_splash.cshtml" />
     <Content Include="Scripts\version.json" />
-    <Content Include="Views\Durandal\_splash.cshtml" />
-    <Content Include="Views\Durandal\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
