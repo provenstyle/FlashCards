@@ -3,7 +3,7 @@
         .module('flashCards')
         .factory('flashCardService', flashCardService);
 
-    flashCardService.$inject = [$q, 'angularMockData', 'multiplicationMockData', 'statesAndCapitalsMockData'];
+    flashCardService.$inject = ['$q', 'angularMockData', 'multiplicationMockData', 'statesAndCapitalsMockData'];
 
     function flashCardService($q, angular, multiplication, statesAndCapitals) {
         

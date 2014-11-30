@@ -20,8 +20,8 @@ namespace FlashCards
 
              .Include("~/App/configs/routeConfig.js")
              
-             .Include("~/App/configs/cardFactory.js")
-             .Include("~/App/configs/selectedCards.js")
+             .Include("~/App/models/cardFactory.js")
+             .Include("~/App/models/selectedCards.js")
 
              .Include("~/App/mockData/angularMockData.js")
              .Include("~/App/mockData/multiplicationMockData.js")

@@ -1,8 +1,8 @@
 ﻿<section>
-   <ul class="list-inline" data-bind="foreach: catalogNames">
-      <li class="col-xs-12 col-sm-6 col-md-3" data-bind="click: $parent.goToCards">
+   <ul class="list-inline">
+      <li class="col-xs-12 col-sm-6 col-md-3" ng-repeat="catalogName in catalogNames"  ng-click="navigate(catalogName)">
          <div class="well">
-            <p class="lead" data-bind="text: $data"></p>
+            <p class="lead">{{ catalogName }}</p>
          </div>
       </li>
    </ul>

@@ -7,16 +7,14 @@
     catalogController.$inject = ['$scope', '$location', 'flashCardService'];
 
     function catalogController($scope, $location, flashCardService) {
-        $scope = {
-            catalogNames: [],
-            navigate: navigate
-        }
+        $scope.catalogNames = [];
+        $scope.navigate = navigate;
 
         activate();
 
         function activate() {
-            service.catalogNames()
-               .done(function (data) {
+            flashCardService.catalogNames()
+               .then(function (data) {
                    $scope.catalogNames = data;
                });
         }

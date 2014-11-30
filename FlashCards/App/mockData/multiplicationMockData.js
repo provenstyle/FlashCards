@@ -4,7 +4,7 @@
         .module('flashCards')
         .factory('multiplicationMockData', multiplicationMockData);
 
-    multiplicationMockData.$inject = ['multiplicationMockData'];
+    multiplicationMockData.$inject = ['cardFactory'];
 
     function multiplicationMockData(cardFactory) {
         return {
